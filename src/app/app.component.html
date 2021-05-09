@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+  </head>
+  <body>
+    <nb-layout>
+      <nb-layout-header fixed>
+        <nb-icon
+          (click)="toggleSidebar()"
+          class="sidebar-toggle"
+          icon="menu-2-outline"
+        ></nb-icon>
+        <h2>MovieList</h2>
+      </nb-layout-header>
+      <nb-sidebar class="menu-sidebar" responsive start>
+        <nb-menu [items]="items"></nb-menu>
+      </nb-sidebar>
+      <nb-layout-column>
+        <router-outlet></router-outlet>
+      </nb-layout-column>
+      <nb-layout-footer fixed>Contact Us</nb-layout-footer>
+    </nb-layout>
+  </body>
+</html>

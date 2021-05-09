@@ -1,0 +1,24 @@
+<div *ngFor="let movie of bookMarkedMovie">
+  <nb-card>
+    <nb-card-header>
+      {{ movie.Title }}
+    </nb-card-header>
+    <nb-card-body>
+      <div class="MovieList">
+        <img src="{{ movie.Poster }}" alt="" class="poster" />
+        <ul class="listofmovies">
+          <li class="List">
+            <h4>{{ movie.Title }}</h4>
+          </li>
+          <li class="List">Genre: {{ movie.Genre }}</li>
+          <li class="List">Actors: {{ movie.Actors }}</li>
+          <li class="List">Director: {{ movie.Director }}</li>
+          <li class="List">Release Date: {{ movie.Released }}</li>
+          <li class="List">Rating: {{ movie.imdbRating }}</li>
+          <li class="List">Country: {{ movie.Country }}</li>
+          <li class="List">Plot: {{ movie.Plot }}</li>
+        </ul>
+      </div>
+    </nb-card-body>
+  </nb-card>
+</div>
